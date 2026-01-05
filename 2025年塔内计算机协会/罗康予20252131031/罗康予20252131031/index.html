@@ -17,9 +17,9 @@
             --text-primary: #2d2d2d;
             --text-secondary: #5a5a5a;
             --border-color: #eaeaea;
-            --accent-warm: #e67e22;
+            --accent-primary: #e67e22;
             /* 橙色（暖） */
-            --accent-warm2: #d35400;
+            --accent-secondary: #aa22ed;
             --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
             --radius: 16px;
         }
@@ -31,9 +31,9 @@
             --text-primary: #f0f0f0;
             --text-secondary: #b0b0b0;
             --border-color: #333;
-            --accent-warm: #4fc3f7;
+            --accent-primary: #4fc3f7;
             /* 蓝色 */
-            --accent-warm2: #69f0ae;
+            --accent-secondary: #69f0ae;
             /* 绿色 */
             --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
@@ -117,7 +117,24 @@
         }
 
         .icon-links a:hover {
-            color: var(--accent-warm);
+            color: var(--accent-primary);
+        }
+
+        .icon-links .link-blog {
+            color: var(--accent-secondary) !important;
+            display: inline-block;
+            animation: silky-glow 4s infinite cubic-bezier(0.4, 0, 0.6, 1);
+        }
+
+        @keyframes silky-glow {
+            0%, 100% {
+                filter: drop-shadow(0 0 2px var(--accent-secondary));
+                opacity: 0.8;
+            }
+            50% {
+                filter: drop-shadow(0 0 15px var(--accent-secondary));
+                opacity: 1;
+            }
         }
 
         .content {
@@ -144,7 +161,7 @@
         .section h2 {
             font-size: 1.2rem;
             margin-bottom: 12px;
-            color: var(--accent-warm);
+            color: var(--accent-primary);
             font-weight: 600;
         }
 
@@ -234,9 +251,9 @@
                 <a href="https://space.bilibili.com/558830935" target="_blank" title="Bilibili">
                     <i class="fab fa-bilibili"></i>
                 </a>
-                <!-- <a href="https://example.com/blog" target="_blank" title="博客">
+                <a href="https://blog.z0z0r4.top" target="_blank" title="z0z0r4's Blog" class="link-blog">
                     <i class="fas fa-blog"></i>
-                </a> -->
+                </a>
             </div>
         </div>
 
